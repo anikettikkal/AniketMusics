@@ -1147,7 +1147,20 @@
             { title: "Chidiya", artist: "Vilen", src: "songs/Chidiya.mp3" },
             { title: "Ye Jo Halka Halka Suroor", artist: "Nusrat Fateh Ali Khan", src: "songs/HalkaHalka.mp3" },
             { title: "Humdard", artist: "Arijit Singh", src: "songs/Humdard.mp3" },
-            { title: "Kaise Hua" , artist: "Arijit Singh", src: "songs/KaiseHua.mp3"}
+            { title: "Arjit Mashup", artist: "Arijit Singh", src: "SecondPlaylist/ArjitMashup.mp3" },
+            { title: "Dheere Dheere Se", artist: "Honey Singh", src: "SecondPlaylist/DheereDheereSe.mp3" },
+            { title: "Ek Samay Me To", artist: "Altamash Faridi", src: "SecondPlaylist/EkSamayMeTo.mp3" },
+            { title: "Ik Kahani", artist: "Gajendra Verma", src: "SecondPlaylist/IkKahani.mp3" },
+            { title: "Kabil", artist: "Jubin Nautiyal", src: "SecondPlaylist/Kabil.mp3" },
+            { title: "Kajra", artist: "Aasha Bhosale", src: "SecondPlaylist/Kajra.mp3" },
+            { title: "Luka Chuppi", artist: "A.R.Rahman", src: "SecondPlaylist/LukaChuppi.mp3" },
+            { title: "Morning Drive", artist: "Marathi Mashup", src: "SecondPlaylist/Morning Drive.mp3" },
+            { title: "Qismat", artist: "Ammy Virk", src: "SecondPlaylist/Qismat.mp3" },
+            { title: "Sun Sonio", artist: "Mohit Chauhan", src: "SecondPlaylist/SunSonio.mp3" },
+            { title: "Tune Mere Jana", artist: "Gajendra Verma", src: "SecondPlaylist/TuneMereJana.mp3" },
+            { title: "Vibe Mashup", artist: "Hindi Mashup", src: "SecondPlaylist/VibeMashup.mp3" },
+            { title: "Why This Kolaveri", artist: "Dhanush", src: "SecondPlaylist/WhyThisKolaveri.mp3" },
+
         ];
 
         /* STORAGE */
@@ -1171,7 +1184,7 @@
         let currentIndex = -1;
         let currentView = "all";
         let selectedPlaylist = -1;
-        let shuffle = false;
+        let shuffle = true;
         let repeatMode = 0; // 0 off, 1 repeat all, 2 repeat one
         let isPlaying = false;
         let artworkCache = {};
@@ -1725,6 +1738,7 @@
             renderHistory();
             updateLikeButton();
             drawIdleVisualizer();
+            $("shuffleBtn").classList.toggle("active", shuffle);
         }
         init();
     </script>
